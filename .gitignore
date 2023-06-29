@@ -1,0 +1,18 @@
+# Xcode
+
+## Build generated
+build/
+DerivedData
+
+## OS X System files
+.DS_Store
+
+# Cocoapods
+Pods/
+demos/**/Pods/
+Podfile.lock
+
+## Cache
+git rm --cached NetflixClone.xcodeproj/project.xcworkspace/xcuserdata/alejandro.xcuserdatad/UserInterfaceState.xcuserstate
+git rm --cached NetflixClone.xcodeproj/project.xcworkspace/xcuserdata/
+NetflixClone.xcodeproj/project.xcworkspace/xcuserdata/
