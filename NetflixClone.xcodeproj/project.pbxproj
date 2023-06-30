@@ -16,6 +16,7 @@
 		A9F7809B2A4F5DE4001630AD /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7809A2A4F5DE4001630AD /* UpcomingViewController.swift */; };
 		A9F7809D2A4F5E1B001630AD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7809C2A4F5E1B001630AD /* SearchViewController.swift */; };
 		A9F7809F2A4F5E4C001630AD /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7809E2A4F5E4C001630AD /* DownloadsViewController.swift */; };
+		A9F780A72A4F6758001630AD /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F780A62A4F6758001630AD /* CollectionViewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A9F7809A2A4F5DE4001630AD /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		A9F7809C2A4F5E1B001630AD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A9F7809E2A4F5E4C001630AD /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		A9F780A62A4F6758001630AD /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		A9F780A12A4F66B9001630AD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A9F780A62A4F6758001630AD /* CollectionViewTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				A9F7809D2A4F5E1B001630AD /* SearchViewController.swift in Sources */,
 				A9544B162A4E4A8F0022067A /* MainTabBarViewController.swift in Sources */,
+				A9F780A72A4F6758001630AD /* CollectionViewTableViewCell.swift in Sources */,
 				A9F7809F2A4F5E4C001630AD /* DownloadsViewController.swift in Sources */,
 				A9544B122A4E4A8F0022067A /* AppDelegate.swift in Sources */,
 				A9544B142A4E4A8F0022067A /* SceneDelegate.swift in Sources */,
