@@ -9,6 +9,12 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    private let sectionTitles: [String] = [
+    "Trending Movies",
+    "Trending TV",
+    "Upcoming Movies",
+    "Top rated"]
+    
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
