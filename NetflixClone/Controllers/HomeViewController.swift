@@ -55,7 +55,13 @@ class HomeViewController: UIViewController {
     }
     
     private func getTrendingMovies() {
-        APICaller.shared.getTrendingMovies { _ in
+        APICaller.shared.getTrendingMovies { results in
+            switch results {
+            case .success(let movie):
+                print(movie)
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }
