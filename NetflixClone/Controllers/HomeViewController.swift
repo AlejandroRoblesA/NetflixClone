@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     
     private let sectionTitles: [String] = [
     "Trending Movies",
+    "Popular",
     "Trending TV",
     "Upcoming Movies",
     "Top rated"]
@@ -56,7 +57,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 20
+        return sectionTitles.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
