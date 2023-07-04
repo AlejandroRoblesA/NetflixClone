@@ -11,8 +11,8 @@ class HomeViewController: UIViewController {
     
     private let sectionTitles: [String] = [
     "Trending Movies",
-    "Popular",
     "Trending TV",
+    "Popular",
     "Upcoming Movies",
     "Top rated"]
     
