@@ -14,7 +14,8 @@
 		A9544B1E2A4E4A900022067A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9544B1C2A4E4A900022067A /* LaunchScreen.storyboard */; };
 		A9544FD22A51025E006A23D3 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9544FD12A51025E006A23D3 /* HeroHeaderUIView.swift */; };
 		A95555252A535E8C0074A8A7 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95555242A535E8C0074A8A7 /* APICaller.swift */; };
-		A95555272A5363840074A8A7 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95555262A5363840074A8A7 /* Movie.swift */; };
+		A95555272A5363840074A8A7 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95555262A5363840074A8A7 /* Title.swift */; };
+		A99E5FCF2A54D0BC00541325 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E5FCE2A54D0BC00541325 /* Extensions.swift */; };
 		A9F780992A4F5DA6001630AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F780982A4F5DA6001630AD /* HomeViewController.swift */; };
 		A9F7809B2A4F5DE4001630AD /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7809A2A4F5DE4001630AD /* UpcomingViewController.swift */; };
 		A9F7809D2A4F5E1B001630AD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F7809C2A4F5E1B001630AD /* SearchViewController.swift */; };
@@ -32,7 +33,8 @@
 		A9544B1F2A4E4A900022067A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9544FD12A51025E006A23D3 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		A95555242A535E8C0074A8A7 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
-		A95555262A5363840074A8A7 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		A95555262A5363840074A8A7 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		A99E5FCE2A54D0BC00541325 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A9F780982A4F5DA6001630AD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A9F7809A2A4F5DE4001630AD /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		A9F7809C2A4F5E1B001630AD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +118,7 @@
 		A9F780A22A4F66BD001630AD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A95555262A5363840074A8A7 /* Movie.swift */,
+				A95555262A5363840074A8A7 /* Title.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +126,7 @@
 		A9F780A32A4F66DD001630AD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A99E5FCE2A54D0BC00541325 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -206,13 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A95555272A5363840074A8A7 /* Movie.swift in Sources */,
+				A95555272A5363840074A8A7 /* Title.swift in Sources */,
 				A9F7809D2A4F5E1B001630AD /* SearchViewController.swift in Sources */,
 				A9544B162A4E4A8F0022067A /* MainTabBarViewController.swift in Sources */,
 				A9F780A72A4F6758001630AD /* CollectionViewTableViewCell.swift in Sources */,
 				A95555252A535E8C0074A8A7 /* APICaller.swift in Sources */,
 				A9544FD22A51025E006A23D3 /* HeroHeaderUIView.swift in Sources */,
 				A9F7809F2A4F5E4C001630AD /* DownloadsViewController.swift in Sources */,
+				A99E5FCF2A54D0BC00541325 /* Extensions.swift in Sources */,
 				A9544B122A4E4A8F0022067A /* AppDelegate.swift in Sources */,
 				A9544B142A4E4A8F0022067A /* SceneDelegate.swift in Sources */,
 				A9F7809B2A4F5DE4001630AD /* UpcomingViewController.swift in Sources */,
