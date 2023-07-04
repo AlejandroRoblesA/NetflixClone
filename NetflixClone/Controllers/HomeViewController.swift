@@ -63,6 +63,14 @@ class HomeViewController: UIViewController {
                 print(error)
             }
         }
+//        APICaller.shared.getTrendingMovies { results in
+//            switch results {
+//            case .success(let movie):
+//                print(movie)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
 }
 
