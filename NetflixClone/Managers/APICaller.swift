@@ -84,4 +84,21 @@ class APICaller {
         }
         task.resume()
     }
+    
+    func getTopRated(completion: @escaping (Result<[Movie], Error>) -> Void) {
+        guard let url = URL(string: "\(Constants.baseUrl)/3/movie/top_rated?api_key=\(Constants.API_KEY)")
+        else { return }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
+            guard let data = data, error  == nil else { return }
+            do {
+                let result = try JSONDecoder().decode(TrendingMoviesResponse.self, from: data)
+                print(result)
+//                completion(.success(result.results))
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
 }
