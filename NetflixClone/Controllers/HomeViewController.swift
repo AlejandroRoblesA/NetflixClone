@@ -55,7 +55,7 @@ class HomeViewController: UIViewController {
     }
     
     private func getTrendingMovies() {
-        APICaller.shared.getTrendingMovies { results in
+        APICaller.shared.getPopular { results in
             switch results {
             case .success(let movie):
                 print(movie)
