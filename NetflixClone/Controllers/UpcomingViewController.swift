@@ -11,7 +11,7 @@ class UpcomingViewController: UIViewController {
     
     private let upcomingTable: UITableView = {
         let table = UITableView()
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         return table
     }()
     
@@ -57,8 +57,10 @@ extension UpcomingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = self.titles[indexPath.row].original_name ?? self.titles[indexPath.row].original_title ?? ""
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleTableViewCell.identifier, for: indexPath) as? TitleTableViewCell else { return UITableViewCell() }
+        let titleVM = TitleViewModel(titleName: self.titles[indexPath.row].original_name ?? self.titles[indexPath.row].original_title ?? "",
+                                     posterUrl: self.titles[indexPath.row].poster_path ?? "")
+        cell.configure(with: titleVM)
         return cell
     }
 }
