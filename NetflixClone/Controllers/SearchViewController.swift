@@ -31,6 +31,10 @@ class SearchViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         discoverTable.frame = view.bounds
+        
+        APICaller.shared.getDiscoverMovies{ response in
+            print(response)
+        }
     }
 }
 
