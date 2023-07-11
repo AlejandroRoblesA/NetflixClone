@@ -88,7 +88,7 @@ extension SearchViewController: UISearchResultsUpdating {
         let searchBar = searchController.searchBar
         guard
             let query = searchBar.text,
-            query.trimmingCharacters(in: .whitespaces).isEmpty,
+            !query.trimmingCharacters(in: .whitespaces).isEmpty,
             query.trimmingCharacters(in: .whitespaces).count >= 3,
             let resultsController = searchController.searchResultsController as? SearchResultsViewController
         else { return }
@@ -96,7 +96,9 @@ extension SearchViewController: UISearchResultsUpdating {
             switch result {
             case .success(let titles):
                 resultsController.titles = titles
-                resultsController.searchResultsCollectionView.reloadData()
+                DispatchQueue.main.async {
+                    resultsController.searchResultsCollectionView.reloadData()
+                }
             case .failure(let error):
                 print(error.localizedDescription)
             }
