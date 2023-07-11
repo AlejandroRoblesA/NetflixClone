@@ -13,6 +13,5 @@ demos/**/Pods/
 Podfile.lock
 
 ## Cache
-git rm --cached NetflixClone.xcodeproj/project.xcworkspace/xcuserdata/alejandro.xcuserdatad/UserInterfaceState.xcuserstate
-git rm --cached NetflixClone.xcodeproj/project.xcworkspace/xcuserdata/
 NetflixClone.xcodeproj/project.xcworkspace/xcuserdata/
+NetflixClone.xcodeproj/xcuserdata/alejandro.xcuserdatad/xcdebugger/
