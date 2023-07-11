@@ -9,7 +9,7 @@ import UIKit
 
 class SearchResultsViewController: UIViewController {
     
-    private let searchResultsCollectionView: UICollectionView = {
+    public let searchResultsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: UIScreen.main.bounds.width / 3 - 10, height: 200)
         layout.minimumInteritemSpacing = 0
@@ -18,7 +18,7 @@ class SearchResultsViewController: UIViewController {
         return collectionView
     }()
 
-    private var titles: [Title] = [Title]()
+    public var titles: [Title] = [Title]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
