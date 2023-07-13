@@ -134,13 +134,13 @@ class APICaller {
         task.resume()
     }
     
-    func getMovie(with query: String) {
+    func getMovie(with query: String, completion: @escaping (Result<VideoElement, Error>) -> Void) {
         guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
         guard let url = URL(string: "\(Constants.YouTubeBaseUrl)q=\(query)&key=\(Constants.YouTubeAPI_Key)") else { return }
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data = data, error  == nil else { return }
             do {
-                let result = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
+                let result = try JSONDecoder().decode(YoutubeSearchResponse.self, from: data)
                 print(result)
             } catch {
                 print(error.localizedDescription)

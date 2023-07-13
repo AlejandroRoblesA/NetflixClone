@@ -8,7 +8,7 @@
 import Foundation
 
 struct YoutubeSearchResponse: Codable {
-    let item: [VideoElement]
+    let items: [VideoElement]
 }
 
 struct VideoElement: Codable {
