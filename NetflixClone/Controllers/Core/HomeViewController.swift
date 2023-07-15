@@ -45,6 +45,7 @@ class HomeViewController: UIViewController {
         
         headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
+        configureHeroHeaderView()
     }
     
     override func viewDidLayoutSubviews() {
@@ -69,6 +70,9 @@ class HomeViewController: UIViewController {
             switch result {
             case .success(let titles):
                 self?.randomTrendingMovie = titles.randomElement()
+                let selectedTitle = titles.randomElement()
+                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.original_title ?? "",
+                                                                 posterUrl: selectedTitle?.poster_path ?? "") )
             case .failure(let error):
                 print(error.localizedDescription)
             }
