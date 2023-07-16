@@ -49,6 +49,10 @@ class CollectionViewTableViewCell: UITableViewCell {
             self?.collectionview.reloadData()
         }
     }
+    
+    private func downloadTitleAt(indexPath: IndexPath) {
+        print("Downloading \(String(describing: titles[indexPath.row].original_title))")
+    }
 }
 
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -81,5 +85,15 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
                 print(error)
             }
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let config = UIContextMenuConfiguration(actionProvider:  { [weak self] _ in
+            let downloadAction = UIAction(title: "Download", state: .off) { _ in
+                self?.downloadTitleAt(indexPath: indexPath)
+            }
+            return UIMenu(title: "", options: .displayInline, children: [downloadAction])
+        })
+        return config
     }
 }
